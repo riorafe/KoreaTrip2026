@@ -1,0 +1,1742 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Korea Trip 2026 — Rio, Wife, Salomon & Icha</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --cream: #faf7f2;
+        --paper: #f3eee5;
+        --warm-white: #fffdf9;
+        --ink: #1c1a16;
+        --ink-muted: #6b6457;
+        --ink-faint: #b5ac9e;
+        --accent: #c84b2f;
+        --accent-light: #f5e8e4;
+        --gold: #c8922f;
+        --gold-light: #fbf3e2;
+        --green: #3a6b3f;
+        --green-light: #e6f0e7;
+        --blue: #2b5ea7;
+        --blue-light: #e6edf8;
+        --pink: #b03a6e;
+        --pink-light: #f8e8f1;
+        --border: rgba(28, 26, 22, 0.1);
+        --border-med: rgba(28, 26, 22, 0.16);
+        --shadow: 0 1px 8px rgba(28, 26, 22, 0.07);
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: var(--cream);
+        color: var(--ink);
+        font-family: "DM Sans", sans-serif;
+        font-size: 15px;
+        line-height: 1.6;
+      }
+
+      .header {
+        background: var(--ink);
+        color: #e8e0d4;
+        padding: 2.5rem 2rem 2rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .header::after {
+        content: "서울";
+        position: absolute;
+        right: 1rem;
+        bottom: -10px;
+        font-family: "DM Serif Display", serif;
+        font-size: 100px;
+        opacity: 0.05;
+        pointer-events: none;
+      }
+      .eyebrow {
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--ink-faint);
+        margin-bottom: 0.5rem;
+      }
+      .htitle {
+        font-family: "DM Serif Display", serif;
+        font-size: clamp(28px, 6vw, 44px);
+        line-height: 1.1;
+        margin-bottom: 0.3rem;
+      }
+      .htitle em {
+        color: #e8a87c;
+        font-style: italic;
+      }
+      .hwho {
+        font-size: 13px;
+        color: #9e9588;
+        margin-bottom: 1rem;
+      }
+      .pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+      }
+      .pill {
+        font-size: 12px;
+        font-weight: 500;
+        padding: 4px 12px;
+        border-radius: 99px;
+        background: rgba(255, 255, 255, 0.09);
+        color: #d4cbbc;
+        border: 1px solid rgba(255, 255, 255, 0.13);
+      }
+
+      .nav {
+        background: var(--warm-white);
+        border-bottom: 1px solid var(--border);
+        padding: 0 1.25rem;
+        display: flex;
+        overflow-x: auto;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 1px 6px rgba(28, 26, 22, 0.05);
+      }
+      .nav::-webkit-scrollbar {
+        height: 2px;
+      }
+      .nav::-webkit-scrollbar-thumb {
+        background: var(--border-med);
+        border-radius: 99px;
+      }
+      .nb {
+        font-family: "DM Sans", sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        padding: 13px 15px 12px;
+        border: none;
+        background: transparent;
+        color: var(--ink-muted);
+        cursor: pointer;
+        white-space: nowrap;
+        border-bottom: 2px solid transparent;
+        transition:
+          color 0.15s,
+          border-color 0.15s;
+      }
+      .nb:hover {
+        color: var(--ink);
+      }
+      .nb.on {
+        color: var(--accent);
+        border-bottom-color: var(--accent);
+      }
+
+      .main {
+        max-width: 840px;
+        margin: 0 auto;
+        padding: 1.5rem 1.25rem 5rem;
+      }
+      .panel {
+        display: none;
+        animation: fi 0.2s ease;
+      }
+      .panel.on {
+        display: block;
+      }
+      @keyframes fi {
+        from {
+          opacity: 0;
+          transform: translateY(4px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+
+      .sl {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--ink-faint);
+        margin: 2rem 0 0.7rem;
+        padding-bottom: 6px;
+        border-bottom: 1px solid var(--border);
+      }
+      .sl:first-child {
+        margin-top: 0.25rem;
+      }
+
+      .dc {
+        background: var(--warm-white);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 1.1rem 1.4rem;
+        margin-bottom: 10px;
+        box-shadow: var(--shadow);
+      }
+      .dh {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+      }
+      .dnum {
+        font-family: "DM Serif Display", serif;
+        font-size: 13px;
+        color: var(--ink-faint);
+        min-width: 46px;
+        margin-top: 3px;
+        flex-shrink: 0;
+      }
+      .db {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        padding: 3px 10px;
+        border-radius: 99px;
+        white-space: nowrap;
+        flex-shrink: 0;
+        margin-top: 3px;
+      }
+      .b-s {
+        background: var(--blue-light);
+        color: var(--blue);
+      }
+      .b-b {
+        background: var(--green-light);
+        color: var(--green);
+      }
+      .b-m {
+        background: var(--gold-light);
+        color: var(--gold);
+      }
+      .b-d {
+        background: var(--accent-light);
+        color: var(--accent);
+      }
+      .b-v {
+        background: var(--pink-light);
+        color: var(--pink);
+      }
+      .di {
+        flex: 1;
+        min-width: 0;
+      }
+      .dt {
+        font-family: "DM Serif Display", serif;
+        font-size: 19px;
+        line-height: 1.2;
+      }
+      .dd {
+        font-size: 12px;
+        color: var(--ink-muted);
+        margin-top: 1px;
+      }
+      .htag {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 11px;
+        color: var(--ink-muted);
+        background: var(--paper);
+        border: 1px solid var(--border);
+        padding: 3px 9px;
+        border-radius: 99px;
+        margin-top: 6px;
+      }
+
+      ul.a {
+        list-style: none;
+        margin-top: 2px;
+      }
+      ul.a li {
+        font-size: 13.5px;
+        color: var(--ink-muted);
+        padding: 4px 0 4px 18px;
+        position: relative;
+        line-height: 1.55;
+      }
+      ul.a li::before {
+        content: "";
+        position: absolute;
+        left: 5px;
+        top: 12px;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: var(--border-med);
+      }
+      ul.a li strong {
+        color: var(--ink);
+        font-weight: 600;
+      }
+      ul.a li em {
+        color: var(--accent);
+        font-style: normal;
+        font-weight: 500;
+      }
+
+      .note {
+        font-size: 13px;
+        color: var(--ink-muted);
+        background: var(--paper);
+        border-left: 3px solid var(--border-med);
+        border-radius: 0 8px 8px 0;
+        padding: 9px 13px;
+        margin: 8px 0;
+        line-height: 1.6;
+      }
+      .note.w {
+        border-left-color: var(--gold);
+        background: var(--gold-light);
+      }
+      .note.g {
+        border-left-color: var(--green);
+        background: var(--green-light);
+      }
+
+      .hc {
+        background: var(--warm-white);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 1rem 1.25rem;
+        margin-bottom: 8px;
+        box-shadow: var(--shadow);
+      }
+      .hc.u {
+        border-color: #e0956b;
+      }
+      .ht {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .hn {
+        font-weight: 600;
+        font-size: 14px;
+      }
+      .hd {
+        font-size: 12px;
+        color: var(--ink-muted);
+        margin-top: 2px;
+      }
+      .ha {
+        font-size: 11px;
+        color: var(--ink-faint);
+        margin-top: 2px;
+        font-style: italic;
+      }
+      .hp {
+        font-family: "DM Serif Display", serif;
+        font-size: 19px;
+        flex-shrink: 0;
+      }
+      .pp {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 600;
+        padding: 3px 10px;
+        border-radius: 99px;
+        margin-top: 6px;
+      }
+      .p-ok {
+        background: var(--green-light);
+        color: var(--green);
+      }
+      .p-ur {
+        background: var(--accent-light);
+        color: var(--accent);
+      }
+      .p-so {
+        background: var(--gold-light);
+        color: var(--gold);
+      }
+      .p-ch {
+        background: var(--paper);
+        color: var(--ink-muted);
+        border: 1px solid var(--border-med);
+      }
+
+      .fc {
+        background: var(--warm-white);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 1rem 1.25rem;
+        margin-bottom: 8px;
+        box-shadow: var(--shadow);
+      }
+      .fr {
+        font-weight: 600;
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .fa {
+        color: var(--ink-faint);
+      }
+      .fn {
+        font-size: 11px;
+        font-weight: 700;
+        padding: 2px 8px;
+        border-radius: 4px;
+        background: var(--accent-light);
+        color: var(--accent);
+      }
+      .fm {
+        font-size: 12px;
+        color: var(--ink-muted);
+        margin-top: 4px;
+      }
+
+      .sg {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 10px;
+        margin-bottom: 1.5rem;
+      }
+      .sc {
+        background: var(--warm-white);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 1rem 1.1rem;
+      }
+      .slbl2 {
+        font-size: 10px;
+        color: var(--ink-faint);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        margin-bottom: 4px;
+      }
+      .sv {
+        font-family: "DM Serif Display", serif;
+        font-size: 22px;
+      }
+      .ss {
+        font-size: 11px;
+        color: var(--ink-muted);
+        margin-top: 2px;
+      }
+
+      .pl {
+        font-size: 12px;
+        color: var(--ink-muted);
+        margin-bottom: 4px;
+      }
+      .pw {
+        background: var(--border);
+        border-radius: 99px;
+        height: 5px;
+        overflow: hidden;
+        margin-bottom: 1.75rem;
+      }
+      .pf {
+        height: 5px;
+        background: var(--green);
+        border-radius: 99px;
+        transition: width 0.4s ease;
+      }
+      .tsec {
+        margin-bottom: 1.25rem;
+      }
+      .tst {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--ink-muted);
+        margin-bottom: 6px;
+      }
+      .tl {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .ti {
+        display: flex;
+        align-items: flex-start;
+        gap: 11px;
+        padding: 10px 13px;
+        background: var(--warm-white);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.1s;
+        user-select: none;
+      }
+      .ti:hover {
+        background: var(--paper);
+      }
+      .ti.done {
+        opacity: 0.45;
+      }
+      .tc {
+        width: 18px;
+        height: 18px;
+        border-radius: 5px;
+        border: 1.5px solid var(--border-med);
+        background: var(--warm-white);
+        flex-shrink: 0;
+        margin-top: 1px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 11px;
+        font-weight: 700;
+        color: white;
+        transition: all 0.15s;
+      }
+      .ti.done .tc {
+        background: var(--green);
+        border-color: var(--green);
+      }
+      .tlab {
+        font-size: 13.5px;
+        flex: 1;
+        line-height: 1.5;
+      }
+      .ti.done .tlab {
+        text-decoration: line-through;
+        color: var(--ink-faint);
+      }
+      .tm {
+        font-size: 11px;
+        font-weight: 600;
+        padding: 2px 9px;
+        border-radius: 99px;
+        white-space: nowrap;
+        flex-shrink: 0;
+        align-self: flex-start;
+        margin-top: 2px;
+      }
+      .u-now {
+        background: var(--accent-light);
+        color: var(--accent);
+      }
+      .u-soon {
+        background: var(--gold-light);
+        color: var(--gold);
+      }
+      .u-later {
+        background: var(--paper);
+        color: var(--ink-muted);
+        border: 1px solid var(--border-med);
+      }
+
+      .ftags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin: 8px 0 14px;
+      }
+      .ftag {
+        font-size: 12px;
+        font-weight: 500;
+        padding: 4px 12px;
+        border-radius: 99px;
+        background: var(--accent-light);
+        color: var(--accent);
+        border: 1px solid rgba(200, 75, 47, 0.18);
+      }
+
+      @media (max-width: 580px) {
+        .header {
+          padding: 1.75rem 1.25rem 1.5rem;
+        }
+        .main {
+          padding: 1rem 1rem 4rem;
+        }
+        .dc,
+        .hc {
+          padding: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="eyebrow">23 May – 4 June 2026 · Vietnam Airlines</div>
+      <div class="htitle">Korea <em>2026</em></div>
+      <div class="hwho">Rio & Riva · Salomon & Icha · 4 travelers</div>
+      <div class="pills">
+        <span class="pill">✈ Depart 23 May</span>
+        <span class="pill">🛬 Seoul 24-25 May</span>
+        <span class="pill">🌊 Busan 26–29 May</span>
+        <span class="pill">🏙 Seoul again 29 May–2 Jun</span>
+        <span class="pill">🏠 Jakarta 4 Jun 00:40 WIB</span>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <button class="nb on" onclick="show('itin', this)">📅 Itinerary</button>
+      <button class="nb" onclick="show('hotels', this)">🏨 Hotels</button>
+      <button class="nb" onclick="show('flights', this)">✈️ Flights</button>
+      <button class="nb" onclick="show('todo', this)">✅ To-Do & Pay</button>
+      <button class="nb" onclick="show('transport', this)">🚆 Transport</button>
+      <button class="nb" onclick="show('food', this)">🍖 Food & Fun</button>
+    </nav>
+
+    <div class="main">
+      <!-- ITINERARY -->
+      <div id="panel-itin" class="panel on">
+        <div class="sl">Pre-trip · 23 May — Departure from Jakarta</div>
+        <div class="dc">
+          <div class="dh">
+            <div class="dnum">Day 0</div>
+            <span class="db b-d">Departure</span>
+            <div class="di">
+              <div class="dt">Jakarta → Ho Chi Minh City</div>
+              <div class="dd">Saturday, 23 May 2026</div>
+              <span class="htag">🌙 Overnight layover SGN</span>
+            </div>
+          </div>
+          <ul class="a">
+            <li>
+              Arrive <strong>Soekarno-Hatta (CGK)</strong> at least 2.5 hrs
+              before departure
+            </li>
+            <li>
+              Baggage: <strong>cabin 10 kg + check-in 23 kg</strong> per person
+            </li>
+            <li>
+              <em>VN-630</em> departs CGK <strong>13:50</strong> → arrives SGN
+              <strong>17:05</strong>
+            </li>
+            <li>
+              Long layover at Ho Chi Minh City — rest before overnight flight
+            </li>
+            <li>
+              <em>VN-408</em> departs SGN <strong>23:45</strong> → arrives ICN
+              Terminal 1 next day 06:40 KST
+            </li>
+          </ul>
+        </div>
+
+        <div class="sl">Day 1 · 24 May — Arrival & Myeongdong</div>
+        <div class="dc">
+          <div class="dh">
+            <div class="dnum">Day 1</div>
+            <span class="db b-s">Seoul</span>
+            <div class="di">
+              <div class="dt">Incheon Arrival · Myeongdong</div>
+              <div class="dd">Sunday, 24 May 2026</div>
+              <span class="htag"
+                >🏨 Stay Sai Jongno · 12-5 Jong-ro 31-gil, Jongno-gu</span
+              >
+            </div>
+          </div>
+          <ul class="a">
+            <li>
+              Land <strong>Incheon Airport 06:40 KST</strong> — immigration,
+              bags, meet up
+            </li>
+            <li>
+              Get
+              <strong
+                >T-money card (Check-In Seoul by Lotte Card @CU-Terminal
+                1)</strong
+              >
+              at airport (load ₩100,000 each Cashback 10%)
+            </li>
+            <li>
+              Take <strong>AREX Express</strong> → Seoul Station (₩13,000
+              Express ~43 min, ₩4,750 All Stop ~60 min)
+            </li>
+            <li>
+              Lunch: <strong>Myeongdong Kyoja</strong> — famous for kalguksu,
+              mandu
+            </li>
+            <li>
+              Check in to <strong>Stay Sai Jongno</strong> — store bags if early
+              (check-in from 15:00)
+            </li>
+            <li>
+              Visit <strong>Lotte Department Store Myeongdong</strong> — killing
+              time, wait for check-in
+            </li>
+            <li>
+              Visit <strong>Myeongdong Cathedral</strong> — iconic gothic
+              catholic church right in the district
+            </li>
+            <li>
+              Explore <strong>Myeongdong Shopping District (optional)</strong> —
+              explore the main street.
+            </li>
+            <li>Dinner: street food stalls — tteokbokki, hotteok, gimbap</li>
+          </ul>
+        </div>
+
+        <div class="sl">Day 2 · 25 May — Bukchon</div>
+        <div class="dc">
+          <div class="dh">
+            <div class="dnum">Day 2</div>
+            <span class="db b-s">Seoul</span>
+            <div class="di">
+              <div class="dt">Bukchon Hanok Village · Gyeongbokgung</div>
+              <div class="dd">Monday, 25 May 2026</div>
+              <span class="htag">🏨 Stay Sai Jongno</span>
+            </div>
+          </div>
+          <ul class="a">
+            <li>
+              <strong>Bukchon Hanok Village</strong> — go early morning before
+              crowds; iconic alley shots
+            </li>
+            <li>
+              <strong>Hanbok dress-up</strong> rental near Anguk (~₩15,000/hr) —
+              free entry to <strong>Gyeongbokgung Palace</strong> in Hanbok
+            </li>
+            <li>
+              <strong>Gyeongbokgung Palace</strong> — throne hall, changing of
+              the guard ceremony 10:00 & 14:00, National Folk Museum inside
+            </li>
+            <li>
+              Lunch: <strong>Tosokchon Samgyetang</strong> (ginseng chicken
+              soup, iconic near Gyeongbok)
+            </li>
+            <li>
+              Optional evening: <strong>Cheonggyecheon Stream</strong> walk —
+              peaceful lit canal at night
+            </li>
+          </ul>
+        </div>
+
+        <div class="sl">Day 3 · 26 May — Itaewon & KTX to Busan</div>
+        <div class="dc">
+          <div class="dh">
+            <div class="dnum">Day 3</div>
+            <span class="db b-m">Seoul → Busan</span>
+            <div class="di">
+              <div class="dt">Itaewon (War Memorial) → KTX Busan</div>
+              <div class="dd">Tuesday, 26 May 2026</div>
+              <span class="htag"
+                >🏨 Stay Sai Jongno (checkout) → travel to Busan</span
+              >
+            </div>
+          </div>
+          <ul class="a">
+            <li>
+              Morning: check out of <strong>Stay Sai Jongno</strong> — store or
+              bring bags to station
+            </li>
+            <li>
+              Visit <strong>Itaewon</strong> — international district, browse
+              and explore
+            </li>
+            <li>
+              <strong>War Memorial of Korea</strong> — large outdoor military
+              exhibits, free entry, impressive scale
+            </li>
+            <li>
+              Afternoon: head to <strong>Seoul Station</strong> for KTX to Busan
+            </li>
+            <li>
+              KTX: <strong>Seoul → Busan</strong> (~2 hr 15 min) · arrive early
+              evening
+            </li>
+            <li>
+              Taxi or metro to Haeundae → check in
+              <strong>Best Western Premier Haeundae</strong>
+            </li>
+            <li>
+              Evening snack: <strong>Goraesa Eomuk Fishcake Soup</strong> —
+              first taste of Busan
+            </li>
+            <li>Dinner near hotel: <strong>Puradak Chicken</strong></li>
+          </ul>
+          <div class="note w">
+            🚆 Book KTX (4 seats together, afternoon departure) at korail.com or
+            Korail Talk app — book ASAP.
+          </div>
+        </div>
+
+        <div class="sl">Day 4 · 27 May — Haeundae Beach</div>
+        <div class="dc">
+          <div class="dh">
+            <div class="dnum">Day 4</div>
+            <span class="db b-b">Busan</span>
+            <div class="di">
+              <div class="dt">Haeundae Beach · Dongbaekseom Island</div>
+              <div class="dd">Wednesday, 27 May 2026</div>
+              <span class="htag"
+                >🏨 Best Western Premier Haeundae · 42 Gunam-ro,
+                Haeundae-gu</span
+              >
+            </div>
+          </div>
+          <ul class="a">
+            <li>
+              <strong>Haeundae Beach</strong> — Korea's most famous beach; long
+              sandy stretch, morning walk
+            </li>
+            <li>
+              <strong>Dongbaekseom Island</strong> coastal trail — small wooded
+              island, scenic connected walkway
+            </li>
+            <li>
+              <strong>APEC Naru Park</strong> waterfront &
+              <strong>Cheongsapo Lighthouse</strong>
+            </li>
+            <li>
+              <strong>Daritdol Skywalk</strong> — glass-bottom bridge suspended
+              over the sea
+            </li>
+            <li>
+              Check out Best Western → check in
+              <strong>OSOSO Busan</strong> (breakfast included)
+            </li>
+            <li>
+              Dinner: <strong>Dwaeji Gukbap</strong> — Busan's signature pork
+              rice soup, open 24 hrs
+            </li>
+          </ul>
+        </div>
+
+        <div class="sl">Day 5 · 28 May — Haedong Temple & Gwangalli</div>
+        <div class="dc">
+          <div class="dh">
+            <div class="dnum">Day 5</div>
+            <span class="db b-b">Busan</span>
+            <div class="di">
+              <div class="dt">Haedong Yonggungsa Temple · Gwangalli Beach</div>
+              <div class="dd">Thursday, 28 May 2026</div>
+              <span class="htag"
+                >🏨 OSOSO Busan · 9-1 Busanjinseonggongwon-ro, Dong-gu ·
+                Breakfast included</span
+              >
+            </div>
+          </div>
+          <ul class="a">
+            <li>
+              Morning: <strong>Haedong Yonggungsa Temple</strong> — perched on
+              sea cliffs, Korea's most scenic seaside temple; go early
+            </li>
+            <li>Bus 181 from Haeundae, or taxi ~₩15,000–20,000</li>
+            <li>
+              Afternoon: optional <strong>Jimjilbang spa</strong> — Hurshimchung
+              Busan is the classic
+            </li>
+            <li>
+              Evening: <strong>Gwangalli Beach</strong> — sunset, dinner, then
+              <strong>Gwangan Bridge</strong> lit up at night
+            </li>
+            <li>
+              Dinner: <strong>Teumsae Ramyeon</strong> (spicy ramyeon) or
+              <strong>Saemaeul Sikdang</strong> Korean BBQ
+            </li>
+          </ul>
+        </div>
+
+        <div class="sl">Day 6 · 29 May — Gamcheon & KTX back to Seoul</div>
+        <div class="dc">
+          <div class="dh">
+            <div class="dnum">Day 6</div>
+            <span class="db b-m">Busan → Seoul</span>
+            <div class="di">
+              <div class="dt">
+                Gamcheon Culture Village · Seomyeon → KTX Seoul
+              </div>
+              <div class="dd">Friday, 29 May 2026</div>
+              <span class="htag"
+                >🏨 OSOSO Busan (checkout) → Pink Floral Garden House,
+                Seongsu</span
+              >
+            </div>
+          </div>
+          <ul class="a">
+            <li>
+              Morning: <strong>Gamcheon Culture Village</strong> — colourful
+              hillside village, murals, art; bus 마을버스 1-1
+            </li>
+            <li>
+              Afternoon: <strong>Seomyeon district</strong> — Busan's downtown
+              hub, lunch & last shopping
+            </li>
+            <li>Check out <strong>OSOSO Busan</strong></li>
+            <li>
+              Late afternoon/evening KTX: <strong>Busan → Seoul</strong> (~2 hr
+              15 min)
+            </li>
+            <li>
+              Arrive Seoul → Check in to
+              <strong>Pink Floral Garden House</strong>, Seongsu
+            </li>
+          </ul>
+          <div class="note w">
+            🚆 Book KTX return Busan → Seoul at the same time as outbound — 4
+            seats together.
+          </div>
+        </div>
+
+        <div class="sl">Day 7 · 30 May — Ikseongdong & Gwangjang Market</div>
+        <div class="dc">
+          <div class="dh">
+            <div class="dnum">Day 7</div>
+            <span class="db b-s">Seoul</span>
+            <div class="di">
+              <div class="dt">Ikseongdong Hanok Village · Gwangjang Market</div>
+              <div class="dd">Saturday, 30 May 2026</div>
+              <span class="htag"
+                >🏨 Pink Floral Garden House · Seongsu · Breakfast
+                included</span
+              >
+            </div>
+          </div>
+          <ul class="a">
+            <li>
+              Morning: <strong>Ikseongdong Hanok Village</strong> — quieter than
+              Bukchon; indie cafes, local craft shops & tea houses
+            </li>
+            <li>
+              <strong>Cafe Onion Anguk</strong> nearby — beautiful hanok-style
+              cafe, if not visited yet
+            </li>
+            <li>Afternoon: stroll the Insadong area or browse for souvenirs</li>
+            <li>
+              Evening: <strong>Gwangjang Market</strong> — bindaetteok (mung
+              bean pancake), mayak gimbap, raw fish stalls
+            </li>
+            <li>
+              Shopping: <strong>Olive Young, Daiso, Innisfree</strong> along the
+              way
+            </li>
+          </ul>
+        </div>
+
+        <div class="sl">Day 8 · 31 May — Seongsu-dong & Seoul Forest</div>
+        <div class="dc">
+          <div class="dh">
+            <div class="dnum">Day 8</div>
+            <span class="db b-s">Seoul</span>
+            <div class="di">
+              <div class="dt">Seongsu-dong Cafe Street · Seoul Forest</div>
+              <div class="dd">Sunday, 31 May 2026</div>
+              <span class="htag"
+                >🏨 Pink Floral Garden House · Seongsu · Breakfast
+                included</span
+              >
+            </div>
+          </div>
+          <ul class="a">
+            <li>
+              Morning: explore <strong>Seongsu-dong</strong> — Seoul's Brooklyn;
+              concept stores, converted factories, indie cafes
+            </li>
+            <li>
+              <strong>Cafe Onion Seongsu</strong> — the neighbourhood's flagship
+              cafe, often has a queue
+            </li>
+            <li>
+              <strong>Seoul Forest</strong> (서울숲) — large urban park; deer
+              roam freely, peaceful walking paths
+            </li>
+            <li>
+              Afternoon: more Seongsu cafe hopping & unique boutique shopping
+            </li>
+            <li>
+              Dinner: <strong>Somunnan Gamjatang</strong> (pork spine stew) or a
+              solid Korean BBQ
+            </li>
+          </ul>
+        </div>
+
+        <div class="sl">Day 9 · 1 June — Hongdae</div>
+        <div class="dc">
+          <div class="dh">
+            <div class="dnum">Day 9</div>
+            <span class="db b-s">Seoul</span>
+            <div class="di">
+              <div class="dt">Hongdae — Street Art, Shopping & Cafes</div>
+              <div class="dd">Monday, 1 June 2026</div>
+              <span class="htag"
+                >🏨 Aiden by Best Western Cheongdam · 216 Dosan-daero,
+                Gangnam-gu</span
+              >
+            </div>
+          </div>
+          <ul class="a">
+            <li>
+              Check out <strong>Pink Floral Garden House</strong>, check in
+              <strong>Aiden by Best Western Cheongdam</strong>
+            </li>
+            <li>
+              <strong>Hongdae street art zone</strong> — murals, pop-up
+              galleries, busking performers
+            </li>
+            <li>
+              <strong>7-storey Harry Potter Cafe</strong> — book a time slot
+              online in advance!
+            </li>
+            <li>
+              Shopping: <strong>Haus Nowhere Seoul</strong> &
+              <strong>Berry New Pharmacy</strong> — trendy local fashion
+            </li>
+            <li>
+              <strong>London Bagel Museum</strong> for brunch or
+              <strong>Cafe Onion</strong> if not visited yet
+            </li>
+            <li>Evening: Hongdae bar & live music strip</li>
+          </ul>
+          <div class="note">
+            📌 Salomon & Icha check out Pink Floral Garden House today (their
+            3-night stay ends). They'll head home after this day.
+          </div>
+        </div>
+
+        <div class="sl">Day 10 · 2 June — Gangnam & Departure</div>
+        <div class="dc">
+          <div class="dh">
+            <div class="dnum">Day 10</div>
+            <span class="db b-d">Departure</span>
+            <div class="di">
+              <div class="dt">Gangnam Sightseeing → Incheon Airport</div>
+              <div class="dd">Tuesday, 2 June 2026</div>
+              <span class="htag">✈️ VN-403 · ICN 18:05 → SGN 22:35</span>
+            </div>
+          </div>
+          <ul class="a">
+            <li>Check out <strong>Aiden Cheongdam</strong> by 12:00</li>
+            <li>
+              <strong>Starfield Library at COEX</strong> — jaw-dropping 3-storey
+              bookshelves, iconic photo spot
+            </li>
+            <li>
+              Browse <strong>COEX Mall</strong> — last-minute shopping &
+              duty-free cosmetics
+            </li>
+            <li>
+              Farewell lunch: <strong>Hanmiok or Kimjin Moksam</strong> for
+              final Korean BBQ
+            </li>
+            <li>
+              Take <strong>AREX from Seoul Station</strong> → Incheon —
+              <strong>depart by 14:30 at the latest</strong>
+            </li>
+            <li>
+              Arrive airport by 15:30 — check in,
+              <strong>tax refund counter</strong> (keep all shopping receipts!)
+            </li>
+            <li>
+              Flight departs <strong>ICN 18:05</strong> → arrives SGN 22:35
+            </li>
+          </ul>
+          <div class="note w">
+            ⏰ Do NOT leave Seoul Station later than 14:30. International
+            check-in closes 2 hrs before departure.
+          </div>
+        </div>
+
+        <div class="sl">Post-trip · 2–4 June — Layover & Return to Jakarta</div>
+        <div class="dc">
+          <div class="dh">
+            <span class="db b-v">Vietnam → Jakarta</span>
+            <div class="di">
+              <div class="dt">Ho Chi Minh City Layover → CGK</div>
+              <div class="dd">2–4 June 2026</div>
+              <span class="htag">🏨 Paragon Noi Bai Hotel · SGN area</span>
+            </div>
+          </div>
+          <ul class="a">
+            <li>
+              Arrive SGN 22:35 (2 Jun) — all 4 check in to
+              <strong>Paragon Noi Bai Hotel</strong>
+            </li>
+            <li>Rio & Riva: Rp 400,000 · Salomon & Icha: Rp 200,000</li>
+            <li>3 Jun: rest, optional light Ho Chi Minh City sightseeing</li>
+            <li>
+              <em>VN-631</em> departs SGN <strong>20:00 (3 Jun)</strong> →
+              arrives CGK <strong>00:40 WIB (4 Jun)</strong>
+            </li>
+          </ul>
+          <div class="note g">🏠 Trip complete! Welcome home 🎉</div>
+        </div>
+      </div>
+      <!-- /itin -->
+
+      <!-- HOTELS -->
+      <div id="panel-hotels" class="panel">
+        <div class="sg">
+          <div class="sc">
+            <div class="slbl2">Rio & Riva total</div>
+            <div class="sv">Rp 7,39 jt</div>
+            <div class="ss">6 hotels</div>
+          </div>
+          <div class="sc">
+            <div class="slbl2">Salomon & Icha total</div>
+            <div class="sv">Rp 9,83 jt</div>
+            <div class="ss">5 hotels</div>
+          </div>
+          <div class="sc">
+            <div class="slbl2">Shared hotels</div>
+            <div class="sv">4</div>
+            <div class="ss">Same property</div>
+          </div>
+          <div class="sc">
+            <div class="slbl2">Full trip</div>
+            <div class="sv">12</div>
+            <div class="ss">23 May – 4 Jun</div>
+          </div>
+        </div>
+
+        <div class="sl">Rio & Riva — 6 Hotels</div>
+        <div class="hc">
+          <div class="ht">
+            <div>
+              <div class="hn">Stay Sai Jongno (스테이사이)</div>
+              <div class="hd">
+                24–27 May · 3 nights · Check-in Day 1, checkout Day 3 morning
+              </div>
+              <div class="ha">12-5 Jong-ro 31-gil, Jongno-gu, Seoul</div>
+            </div>
+            <div class="hp">Rp 2,018,811</div>
+          </div>
+          <span class="pp p-ok">✓ PAID — Booking.com</span>
+        </div>
+        <div class="hc u">
+          <div class="ht">
+            <div>
+              <div class="hn">Best Western Premier Haeundae</div>
+              <div class="hd">26–27 May · 1 night · Haeundae, Busan</div>
+              <div class="ha">42 Gunam-ro, Haeundae-gu, Busan</div>
+            </div>
+            <div class="hp">Rp 700,000</div>
+          </div>
+          <span class="pp p-ur">⚠ Pay by 22 May — Agoda</span>
+        </div>
+        <div class="hc u">
+          <div class="ht">
+            <div>
+              <div class="hn">OSOSO Busan</div>
+              <div class="hd">27–29 May · 2 nights · Breakfast included</div>
+              <div class="ha">9-1 Busanjinseonggongwon-ro, Dong-gu, Busan</div>
+            </div>
+            <div class="hp">Rp 925,000</div>
+          </div>
+          <span class="pp p-ur">⚠ Pay by 23 May — Booking.com</span>
+        </div>
+        <div class="hc u">
+          <div class="ht">
+            <div>
+              <div class="hn">Pink Floral Garden House — Seongsu</div>
+              <div class="hd">29 May–1 Jun · 2 nights · Breakfast included</div>
+              <div class="ha">
+                Seongsu-dong, Seoul · formerly Casa Mignon Anna
+              </div>
+            </div>
+            <div class="hp">Rp 1,888,000</div>
+          </div>
+          <span class="pp p-ur">⚠ Pay by 14 May — Agoda</span>
+        </div>
+        <div class="hc">
+          <div class="ht">
+            <div>
+              <div class="hn">Aiden by Best Western Cheongdam</div>
+              <div class="hd">1–2 Jun · 1 night · Gangnam/Cheongdam area</div>
+              <div class="ha">216 Dosan-daero, Gangnam-gu, Seoul</div>
+            </div>
+            <div class="hp">Rp 1,456,000</div>
+          </div>
+          <span class="pp p-so">Pay by 27 May — Agoda</span>
+        </div>
+        <div class="hc">
+          <div class="ht">
+            <div>
+              <div class="hn">Paragon Noi Bai Hotel — Vietnam</div>
+              <div class="hd">2–3 Jun · 1 night · SGN airport layover</div>
+            </div>
+            <div class="hp">Rp 400,000</div>
+          </div>
+          <span class="pp p-so">Pay by 29 May — Agoda</span>
+        </div>
+
+        <div class="sl" style="margin-top: 2rem">Salomon & Icha — 5 Hotels</div>
+        <div class="hc">
+          <div class="ht">
+            <div>
+              <div class="hn">Nouvelle Hotel Seoul</div>
+              <div class="hd">24–27 May · 3 nights · Seoul</div>
+            </div>
+            <div class="hp">Rp 3,400,000</div>
+          </div>
+          <span class="pp p-ch">Confirm payment</span>
+        </div>
+        <div class="hc u">
+          <div class="ht">
+            <div>
+              <div class="hn">Best Western Premier Haeundae</div>
+              <div class="hd">26–27 May · 1 night · Same hotel as Rio</div>
+              <div class="ha">42 Gunam-ro, Haeundae-gu, Busan</div>
+            </div>
+            <div class="hp">Rp 700,000</div>
+          </div>
+          <span class="pp p-ur">⚠ Pay by 22 May — Agoda</span>
+        </div>
+        <div class="hc u">
+          <div class="ht">
+            <div>
+              <div class="hn">OSOSO Busan</div>
+              <div class="hd">27–29 May · 2 nights · Same hotel as Rio</div>
+              <div class="ha">9-1 Busanjinseonggongwon-ro, Dong-gu, Busan</div>
+            </div>
+            <div class="hp">Rp 925,000</div>
+          </div>
+          <span class="pp p-ur">⚠ Pay by 23 May — Booking.com</span>
+        </div>
+        <div class="hc">
+          <div class="ht">
+            <div>
+              <div class="hn">Pink Floral Garden House — Seongsu</div>
+              <div class="hd">
+                29 May–2 Jun · 3 nights · Same property as Rio · Breakfast
+                included
+              </div>
+              <div class="ha">Seongsu-dong, Seoul</div>
+            </div>
+            <div class="hp">Rp 4,600,000</div>
+          </div>
+          <span class="pp p-ch">Confirm payment</span>
+        </div>
+        <div class="hc">
+          <div class="ht">
+            <div>
+              <div class="hn">Paragon Noi Bai Hotel — Vietnam</div>
+              <div class="hd">2–3 Jun · 1 night · Same hotel as Rio</div>
+            </div>
+            <div class="hp">Rp 200,000</div>
+          </div>
+          <span class="pp p-ch">Confirm payment</span>
+        </div>
+
+        <div class="note" style="margin-top: 14px">
+          📌 <strong>Pink Floral Garden House = Casa Mignon Anna</strong> — name
+          changed, confirmed by hotel email. Both couples at the same property.
+          Salomon & Icha: 3 nights (1 extra night vs Rio, checkout 2 Jun).
+        </div>
+      </div>
+
+      <!-- FLIGHTS -->
+      <div id="panel-flights" class="panel">
+        <div class="sl">Outbound — Vietnam Airlines via Ho Chi Minh City</div>
+        <div class="fc">
+          <div>
+            <div class="fr">
+              CGK <span class="fa">→</span> SGN <span class="fn">VN-630</span>
+            </div>
+            <div class="fm">23 May · Departs 13:50 → Arrives 17:05</div>
+          </div>
+        </div>
+        <div class="fc">
+          <div>
+            <div class="fr">
+              SGN <span class="fa">→</span> ICN <span class="fn">VN-408</span>
+            </div>
+            <div class="fm">
+              23 May 23:45 → 24 May 06:40 KST (overnight, next day)
+            </div>
+          </div>
+        </div>
+
+        <div class="sl">Return — Vietnam Airlines via Hanoi</div>
+        <div class="fc">
+          <div>
+            <div class="fr">
+              ICN <span class="fa">→</span> HAN <span class="fn">VN-403</span>
+            </div>
+            <div class="fm">2 Jun · Departs 18:05 → Arrives 22:35</div>
+          </div>
+        </div>
+        <div class="fc">
+          <div>
+            <div class="fr">
+              HAN <span class="fa">→</span> CGK <span class="fn">VN-631</span>
+            </div>
+            <div class="fm">
+              3 Jun · Departs 20:00 → Arrives 00:40 WIB (4 Jun)
+            </div>
+          </div>
+        </div>
+
+        <div class="sl">Booking & Baggage</div>
+        <div class="note">
+          Booked via <strong>Traveloka</strong> · Cabin:
+          <strong>10 kg pp</strong> · Check-in: <strong>23 kg pp</strong
+          ><br /><br />Total Rio & Riva:
+          <strong>Rp 12,027,740</strong> (Outbound Rp 6,574,802 · Return Rp
+          4,222,938 · Visa protection Rp 1,230,000)
+        </div>
+
+        <div class="sl">Airport Transfers</div>
+        <div class="note">
+          <strong>Incheon → Seoul (24 May):</strong> AREX Express from ICN →
+          Seoul Station (₩13,000 Express ~43 min, ₩4,750 All Stop ~60 min). Get
+          T-money card (Check-In Seoul by Lotte Card) at airport before
+          boarding.
+        </div>
+        <div class="note" style="margin-top: 8px">
+          <strong>Seoul → Incheon (2 Jun):</strong> AREX from Seoul Station.
+          Flight at 18:05 — <strong>depart Seoul by 14:30 latest</strong>.
+          Arrive airport 15:30 for check-in and tax refund.
+        </div>
+      </div>
+
+      <!-- TO-DO -->
+      <div id="panel-todo" class="panel">
+        <div class="pl" id="pl">Loading…</div>
+        <div class="pw"><div class="pf" id="pf" style="width: 0%"></div></div>
+        <div id="troot"></div>
+        <div class="note" style="margin-top: 1rem">
+          Tap any item to mark it done. Saved automatically in this browser.
+        </div>
+      </div>
+
+      <!-- TRANSPORT -->
+      <div id="panel-transport" class="panel">
+        <div class="sl">T-money Card — Get at Incheon Airport immediately</div>
+        <div class="note">
+          Buy T-money at ICN airport arrival hall (CU or 7-Eleven). Load
+          ₩50,000–100,000 each. Works on all Seoul & Busan metro lines, city
+          buses, some taxis. Refillable at any CU, GS25, or 7-Eleven.
+          <strong>All 4 people need one.</strong>
+        </div>
+
+        <div class="sl">Seoul Metro Key Lines</div>
+        <div class="dc">
+          <ul class="a">
+            <li>
+              <strong>Line 2 (Green)</strong> — Hongdae (Hapjeong stn), Seongsu,
+              Gangnam, City Hall
+            </li>
+            <li>
+              <strong>Line 3 (Orange)</strong> — Gyeongbokgung stn, Anguk
+              (Bukchon, Insadong)
+            </li>
+            <li>
+              <strong>Line 4 (Blue)</strong> — Myeongdong, Seoul Station (AREX
+              to/from airport)
+            </li>
+            <li>
+              <strong>Line 6</strong> — Itaewon station (War Memorial of Korea)
+            </li>
+            <li>
+              <strong>Kakao T</strong> app — book taxis in English, reliable,
+              card payment available
+            </li>
+            <li>
+              <strong>Naver Maps</strong> — best navigation in Korea; download
+              offline map before departure
+            </li>
+          </ul>
+        </div>
+
+        <div class="sl">Seoul → Busan · KTX (26 May afternoon)</div>
+        <div class="dc">
+          <ul class="a">
+            <li>
+              Route: <strong>Seoul Station → Busan Station</strong> · ~2 hr 15
+              min
+            </li>
+            <li>
+              Fare: ~<strong>₩59,800 pp</strong> standard class — book 4 seats
+              in the same car
+            </li>
+            <li>
+              Book at <strong>korail.com</strong> or
+              <strong>Korail Talk app</strong> (international credit cards
+              accepted)
+            </li>
+            <li>
+              <strong>Book as soon as possible</strong> — trains fill up fast,
+              especially into/out of weekends
+            </li>
+          </ul>
+        </div>
+
+        <div class="sl">Busan City Transport</div>
+        <div class="dc">
+          <ul class="a">
+            <li>Same T-money card works on all Busan metro and buses</li>
+            <li>
+              <strong>Gamcheon Village:</strong> bus 마을버스 1-1 from
+              Toseong-dong metro station
+            </li>
+            <li>
+              <strong>Haedong Yonggungsa:</strong> bus 181 from Haeundae, or
+              taxi ~₩15,000–20,000
+            </li>
+            <li>City center ↔ Busan Station taxi: ~₩8,000–12,000</li>
+          </ul>
+        </div>
+
+        <div class="sl">Busan → Seoul · KTX (29 May evening)</div>
+        <div class="dc">
+          <ul class="a">
+            <li>
+              Route: <strong>Busan Station → Seoul Station</strong> · ~2 hr 15
+              min
+            </li>
+            <li>
+              Book same session as outbound — 4 seats together in same car
+            </li>
+            <li>Take late afternoon/evening train after Gamcheon & Seomyeon</li>
+            <li>
+              Arrive Seoul ~20:00–21:00 — check in Pink Floral Garden House
+              comfortably
+            </li>
+          </ul>
+        </div>
+
+        <div class="sl">Apps to Download Before Departure</div>
+        <div class="dc">
+          <ul class="a">
+            <li>
+              <strong>Naver Maps</strong> — best navigation in Korea (download
+              offline map)
+            </li>
+            <li>
+              <strong>Kakao T</strong> — taxi booking, English interface, card
+              payment
+            </li>
+            <li>
+              <strong>Papago</strong> — Korean ↔ Indonesian/English translation
+              by Naver
+            </li>
+            <li><strong>Korail Talk</strong> — KTX booking & e-tickets</li>
+            <li>
+              <strong>Traveloka / Agoda</strong> — manage hotel bookings on the
+              go
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- FOOD & FUN -->
+      <div id="panel-food" class="panel">
+        <div class="sl">Street Food Must-Tries</div>
+        <div class="ftags">
+          <span class="ftag">Korean BBQ (KBBQ)</span
+          ><span class="ftag">Dak Galbi</span><span class="ftag">Bibimbap</span>
+          <span class="ftag">Bulgogi</span><span class="ftag">Tteokbokki</span
+          ><span class="ftag">Gimbap</span> <span class="ftag">Hotteok</span
+          ><span class="ftag">Bindaetteok</span
+          ><span class="ftag">Samgyetang</span>
+          <span class="ftag">Dwaeji Gukbap</span
+          ><span class="ftag">Gamjatang</span
+          ><span class="ftag">Mayak Gimbap</span>
+        </div>
+
+        <div class="sl">Restaurants by Area</div>
+        <div class="dc">
+          <ul class="a">
+            <li>
+              <strong>[Myeongdong · Day 1]</strong> Myeongdong Kyoja — famous
+              knife-cut noodle soup
+            </li>
+            <li>
+              <strong>[Near Gyeongbok · Day 2]</strong> Tosokchon Samgyetang —
+              ginseng chicken soup, best in Seoul
+            </li>
+            <li>
+              <strong>[Anguk/Seongsu]</strong> Cafe Onion — hanok cafe (Anguk)
+              or converted factory (Seongsu flagship)
+            </li>
+            <li>
+              <strong>[Hongdae · Day 9]</strong> London Bagel Museum — K-vibe
+              bagels, long weekend queues
+            </li>
+            <li>
+              <strong>[Gangnam · Day 10]</strong> Nudake Gangnam — beautiful
+              layered dessert cafe
+            </li>
+            <li>
+              <strong>[Gwangjang · Day 7]</strong> Market stalls — bindaetteok,
+              mayak gimbap, raw fish
+            </li>
+            <li>
+              <strong>[Busan · Day 4]</strong> Dwaeji Gukbap — pork rice soup,
+              open 24 hrs, Busan staple
+            </li>
+            <li>
+              <strong>[Busan · Day 5]</strong> Teumsae Ramyeon — ultra-spicy
+              ramyeon chain near Gwangalli
+            </li>
+            <li>
+              <strong>[Busan · Day 5]</strong> Somunnan Gamjatang — rich pork
+              spine stew
+            </li>
+            <li>
+              <strong>[Any]</strong> Saemaeul Sikdang — reliable affordable
+              Korean BBQ chain
+            </li>
+            <li>
+              <strong>[Farewell · Day 10]</strong> Hanmiok / Kimjin Moksam —
+              premium KBBQ for the final dinner
+            </li>
+          </ul>
+        </div>
+
+        <div class="sl">Unique Experiences</div>
+        <div class="dc">
+          <ul class="a">
+            <li>
+              🧙 <strong>7-Storey Harry Potter Cafe</strong> — Hongdae (Day 9);
+              book time slot online before the trip
+            </li>
+            <li>
+              👘 <strong>Hanbok dress-up</strong> near Gyeongbokgung (Day 2) —
+              ~₩15,000/hr; free palace entry in Hanbok
+            </li>
+            <li>
+              🌊 <strong>Haedong Yonggungsa Temple</strong> — Korea's most
+              spectacular seaside temple (Day 5)
+            </li>
+            <li>
+              🧖 <strong>Jimjilbang (Korean spa)</strong> — Hurshimchung Busan ·
+              perfect on Day 5 afternoon
+            </li>
+            <li>
+              🌉 <strong>Gwangan Bridge night view</strong> from Gwangalli Beach
+              — stunning lighting at night (Day 5)
+            </li>
+            <li>
+              🎨 <strong>Gamcheon Culture Village</strong> — Busan's colourful
+              hillside open-air art village (Day 6)
+            </li>
+            <li>
+              📚 <strong>Starfield Library at COEX</strong> — jaw-dropping
+              3-storey bookshelves (Day 10)
+            </li>
+            <li>
+              🌲 <strong>Seoul Forest</strong> — deer roam freely in this large
+              urban park (Day 8)
+            </li>
+          </ul>
+        </div>
+
+        <div class="sl">Shopping Guide</div>
+        <div class="dc">
+          <ul class="a">
+            <li>
+              <strong>Olive Young</strong> — K-beauty essentials; get the
+              loyalty card, buy multiples
+            </li>
+            <li>
+              <strong>Daiso Korea</strong> — huge selection vs Indonesia,
+              budget-friendly everything
+            </li>
+            <li>
+              <strong>Lotte Department Store</strong> — premium Korean brands;
+              use the <em>tax refund exit counter</em>
+            </li>
+            <li>
+              <strong>Innisfree flagship</strong> — much cheaper than Indonesian
+              retail prices
+            </li>
+            <li>
+              <strong>Haus Nowhere Seoul</strong> — trendy local Korean fashion,
+              Hongdae
+            </li>
+            <li>
+              <strong>Berry New Pharmacy</strong> — aesthetic lifestyle &
+              fashion shop, Hongdae
+            </li>
+            <li>
+              <strong>COEX Mall (Day 10)</strong> — last-minute duty-free before
+              airport departure
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- /main -->
+
+    <script>
+      const TODOS = [
+        {
+          t: "Pay Pink Floral Garden House (Rio & Riva) — Rp 1,888,000 via Agoda",
+          u: "now",
+          d: "⚠ Due 14 May",
+        },
+        {
+          t: "Pay Best Western Haeundae (Rio & Riva) — Rp 700,000 via Agoda",
+          u: "now",
+          d: "⚠ Due 22 May",
+        },
+        {
+          t: "Pay Best Western Haeundae (Salomon & Icha) — Rp 700,000 via Agoda",
+          u: "now",
+          d: "⚠ Due 22 May",
+        },
+        {
+          t: "Pay OSOSO Busan (Rio & Riva) — Rp 925,000 via Booking.com",
+          u: "now",
+          d: "⚠ Due 23 May",
+        },
+        {
+          t: "Pay OSOSO Busan (Salomon & Icha) — Rp 925,000 via Booking.com",
+          u: "now",
+          d: "⚠ Due 23 May",
+        },
+        {
+          t: "Book KTX Seoul → Busan (26 May, afternoon, 4 seats together) — korail.com",
+          u: "soon",
+          d: "Book ASAP",
+        },
+        {
+          t: "Book KTX Busan → Seoul (29 May, evening, 4 seats together) — same booking",
+          u: "soon",
+          d: "Book ASAP",
+        },
+        {
+          t: "Book Harry Potter Cafe time slot — Hongdae (1 Jun)",
+          u: "soon",
+          d: "Book online",
+        },
+        {
+          t: "Check K-ETA or Korea visa requirements for all 4 travelers",
+          u: "soon",
+          d: "Before departure",
+        },
+        {
+          t: "Pay Aiden by Best Western Cheongdam (Rio & Riva) — Rp 1,456,000 via Agoda",
+          u: "soon",
+          d: "Due 27 May",
+        },
+        {
+          t: "Pay Paragon Noi Bai Hotel (Rio & Riva) — Rp 400,000 via Agoda",
+          u: "soon",
+          d: "Due 29 May",
+        },
+        {
+          t: "Confirm Nouvelle Hotel Seoul payment — Salomon & Icha (Rp 3,400,000)",
+          u: "soon",
+          d: "Check with Salomon",
+        },
+        {
+          t: "Confirm Pink Floral Garden House payment — Salomon & Icha (Rp 4,600,000)",
+          u: "soon",
+          d: "Check with Salomon",
+        },
+        {
+          t: "Confirm Paragon Noi Bai payment — Salomon & Icha (Rp 200,000)",
+          u: "soon",
+          d: "Check with Salomon",
+        },
+        {
+          t: "Book Hanbok rental near Gyeongbokgung — Day 2, 25 May",
+          u: "later",
+          d: "Optional pre-book",
+        },
+        {
+          t: "Download: Naver Maps, Kakao T, Papago, Korail Talk",
+          u: "later",
+          d: "Before 23 May",
+        },
+        {
+          t: "Exchange IDR → KRW cash (₩300k–500k pp for markets & street food)",
+          u: "later",
+          d: "Before 23 May",
+        },
+        {
+          t: "Coordinate meeting point with Salomon & Icha at ICN on 24 May",
+          u: "later",
+          d: "Before departure",
+        },
+        {
+          t: "Get T-money cards at Incheon Airport — all 4 people (24 May)",
+          u: "later",
+          d: "24 May morning",
+        },
+        {
+          t: "Keep all shopping receipts for tax refund at ICN airport (2 Jun departure)",
+          u: "later",
+          d: "Throughout trip",
+        },
+      ];
+
+      const SEC = {
+        now: "🔴 Urgent — Action needed now",
+        soon: "🟡 Soon — Before or early in trip",
+        later: "⚪ Later — During trip or on the day",
+      };
+      const UC = { now: "u-now", soon: "u-soon", later: "u-later" };
+
+      function load() {
+        try {
+          return JSON.parse(localStorage.getItem("k26") || "{}");
+        } catch {
+          return {};
+        }
+      }
+      function save(s) {
+        try {
+          localStorage.setItem("k26", JSON.stringify(s));
+        } catch {}
+      }
+
+      function render() {
+        const st = load(),
+          root = document.getElementById("troot");
+        root.innerHTML = "";
+        ["now", "soon", "later"].forEach((g) => {
+          const items = TODOS.map((t, i) => ({ ...t, i })).filter(
+            (t) => t.u === g,
+          );
+          const sec = document.createElement("div");
+          sec.className = "tsec";
+          sec.innerHTML = `<div class="tst">${SEC[g]}</div><div class="tl" id="tg-${g}"></div>`;
+          root.appendChild(sec);
+          const list = sec.querySelector(`#tg-${g}`);
+          items.forEach(({ t, d, i }) => {
+            const done = !!st[i];
+            const el = document.createElement("div");
+            el.className = "ti" + (done ? " done" : "");
+            el.innerHTML = `<div class="tc">${done ? "✓" : ""}</div><div class="tlab">${t}</div><span class="tm ${UC[g]}">${d}</span>`;
+            el.onclick = () => {
+              const s = load();
+              s[i] = !s[i];
+              save(s);
+              render();
+            };
+            list.appendChild(el);
+          });
+        });
+        const done = Object.values(st).filter(Boolean).length;
+        const pct = Math.round((done / TODOS.length) * 100);
+        document.getElementById("pf").style.width = pct + "%";
+        document.getElementById("pl").textContent =
+          `${done} of ${TODOS.length} tasks complete (${pct}%)`;
+      }
+
+      function show(id, btn) {
+        document
+          .querySelectorAll(".panel")
+          .forEach((p) => p.classList.remove("on"));
+        document
+          .querySelectorAll(".nb")
+          .forEach((b) => b.classList.remove("on"));
+        document.getElementById("panel-" + id).classList.add("on");
+        btn.classList.add("on");
+      }
+
+      render();
+    </script>
+  </body>
+</html>
