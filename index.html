@@ -133,6 +133,7 @@
               <div class="dt">Bukchon Hanok Village · Gyeongbokgung</div>
               <div class="dd">Monday, 25 May 2026</div>
               <span class="htag">🏨 Stay Sai Jongno</span>
+              <span class="htag">Day starts at 08.00</span>
             </div>
           </div>
           <ul class="a">
@@ -150,8 +151,8 @@
               the guard ceremony 10:00 & 14:00, National Folk Museum inside
             </li>
             <li>
-              Lunch: <strong>Tosokchon Samgyetang</strong> (ginseng chicken
-              soup, iconic near Gyeongbok)
+              Lunch: <strong>Tosokchon Samgyetang</strong> — ginseng chicken
+              soup, iconic near Gyeongbokgung.
             </li>
             <li>
               Cafe hoping: <strong>Cheongsudang Bakery</strong>,
@@ -189,9 +190,11 @@
               </div>
               <div class="dd">Tuesday, 26 May 2026</div>
               <span class="htag">🏨 Stay Sai Jongno</span>
+              <span class="htag">Day starts at 09.00</span>
             </div>
           </div>
           <ul class="a">
+            <li>Brunch at <strong>Okeunnae Dakgalbi Yongsan</strong></li>
             <li>
               Visit <strong>Itaewon</strong> — international district, browse
               and explore
@@ -206,8 +209,19 @@
               distance from War Memorial
             </li>
             <li>
-              Dinner: <strong>Itaewon restaurant strip</strong> — wide range of
-              cuisines; or head back towards Myeongdong / Jongno area
+              Evening snack: <strong>Culinary Mangwon Market</strong> — local
+              market
+            </li>
+            <li>
+              Explore <strong>Hongdae</strong> area — youthful vibe, street art,
+              indie shops, cafes
+            </li>
+            <li>
+              Dinner:
+              <strong
+                >Odarijib Hongdae / Hong’s Jjukkumi / Shin Mi Kyung Hongdae
+                Dakgalbi</strong
+              >
             </li>
           </ul>
         </div>
@@ -820,7 +834,9 @@
               Fare: <strong>₩227,200 total</strong> (₩56,800 pp) ·
               <strong>Rp 2,726,400 total</strong> (Rp 681,600 pp)
             </li>
-            <li>Salomon & Icha share: ₩113,600 = <strong>Rp 1,363,200</strong></li>
+            <li>
+              Salomon & Icha share: ₩113,600 = <strong>Rp 1,363,200</strong>
+            </li>
           </ul>
         </div>
 
@@ -852,7 +868,9 @@
               Fare: <strong>₩239,200 total</strong> (₩59,800 pp) ·
               <strong>Rp 2,870,400 total</strong> (Rp 717,600 pp)
             </li>
-            <li>Salomon & Icha share: ₩119,600 = <strong>Rp 1,435,200</strong></li>
+            <li>
+              Salomon & Icha share: ₩119,600 = <strong>Rp 1,435,200</strong>
+            </li>
             <li>Head to Busan Station after Gamcheon & quick Seomyeon stop</li>
           </ul>
         </div>
@@ -1186,7 +1204,9 @@
             list.appendChild(el);
           });
         });
-        const done = TODOS.filter((t, i) => i in st ? !!st[i] : !!t.preset).length;
+        const done = TODOS.filter((t, i) =>
+          i in st ? !!st[i] : !!t.preset,
+        ).length;
         const pct = Math.round((done / TODOS.length) * 100);
         document.getElementById("pf").style.width = pct + "%";
         document.getElementById("pl").textContent =
