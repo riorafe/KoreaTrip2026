@@ -270,14 +270,41 @@ ul.a li::before {
   border-radius: 50%;
   background: var(--border-med);
 }
-ul.a li strong {
+ul.a li strong,
+ol.a li strong {
   color: var(--ink);
   font-weight: 600;
 }
-ul.a li em {
+ul.a li em,
+ol.a li em {
   color: var(--accent);
   font-style: normal;
   font-weight: 500;
+}
+ol.a {
+  list-style: none;
+  counter-reset: food-list;
+  margin-top: 2px;
+  padding-left: 0;
+}
+ol.a li {
+  counter-increment: food-list;
+  font-size: 13.5px;
+  color: var(--ink-muted);
+  padding: 4px 0 4px 28px;
+  position: relative;
+  line-height: 1.55;
+}
+ol.a li::before {
+  content: counter(food-list);
+  position: absolute;
+  left: 0;
+  top: 4px;
+  min-width: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--border-med);
+  text-align: right;
 }
 
 .note {
