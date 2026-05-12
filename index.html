@@ -176,13 +176,17 @@
           </ul>
         </div>
 
-        <div class="sl">Day 4 · 26 May — Itaewon, War Memorial & National Museum</div>
+        <div class="sl">
+          Day 4 · 26 May — Itaewon, War Memorial & National Museum
+        </div>
         <div class="dc">
           <div class="dh">
             <div class="dnum">Day 4</div>
             <span class="db b-s">Seoul</span>
             <div class="di">
-              <div class="dt">Itaewon · War Memorial · National Museum of Korea</div>
+              <div class="dt">
+                Itaewon · War Memorial · National Museum of Korea
+              </div>
               <div class="dd">Tuesday, 26 May 2026</div>
               <span class="htag">🏨 Stay Sai Jongno</span>
             </div>
@@ -214,10 +218,13 @@
             <div class="dnum">Day 5</div>
             <span class="db b-m">Seoul → Busan</span>
             <div class="di">
-              <div class="dt">KTX Departure · Haeundae Beach · Dongbaekseom Island</div>
+              <div class="dt">
+                KTX Departure · Haeundae Beach · Dongbaekseom Island
+              </div>
               <div class="dd">Wednesday, 27 May 2026</div>
               <span class="htag"
-                >🏨 Stay Sai Jongno (checkout) → Best Western Premier Haeundae</span
+                >🏨 Stay Sai Jongno (checkout) → Best Western Premier
+                Haeundae</span
               >
             </div>
           </div>
@@ -257,7 +264,8 @@
             <li>Dinner near hotel: <strong>Puradak Chicken</strong></li>
           </ul>
           <div class="note w">
-            🚆 KTX No. 27 booked — Seoul 11:58 → Busan 14:42 · 4 seats confirmed.
+            🚆 KTX No. 27 booked — Seoul 11:58 → Busan 14:42 · 4 seats
+            confirmed.
           </div>
         </div>
 
@@ -318,10 +326,13 @@
               hillside village, murals, art; bus 마을버스 1-1
             </li>
             <li>
-              <strong>Seomyeon district</strong> — brief stop for lunch &
-              last shopping before heading to station
+              <strong>Seomyeon district</strong> — brief stop for lunch & last
+              shopping before heading to station
             </li>
-            <li>Check out <strong>OSOSO Busan</strong> — store bags at Busan Station if needed</li>
+            <li>
+              Check out <strong>OSOSO Busan</strong> — store bags at Busan
+              Station if needed
+            </li>
             <li>
               KTX CheongRyong departs <strong>Busan 12:34</strong> · arrives
               Seoul <strong>14:59</strong>
@@ -332,7 +343,8 @@
             </li>
           </ul>
           <div class="note g">
-            🚆 KTX CheongRyong booked — Busan 12:34 → Seoul 14:59 · 4 seats confirmed.
+            🚆 KTX CheongRyong booked — Busan 12:34 → Seoul 14:59 · 4 seats
+            confirmed.
           </div>
         </div>
 
@@ -446,8 +458,8 @@
             <li>Evening: Hongdae bar & live music strip</li>
           </ul>
           <div class="note">
-            📌 Salomon & Icha check out Pink Floral Garden House today (their
-            3-night stay ends).
+            📌 Salomon & Icha continue with Pink Floral Garden House (their
+            3-night stay ends tomorrow).
           </div>
         </div>
 
@@ -626,7 +638,7 @@
             </div>
             <div class="hp">Rp 3,400,000</div>
           </div>
-          <span class="pp p-ch">Confirm payment</span>
+          <span class="pp p-ok">✓ PAID 11 May — Trip.com (Salomon)</span>
         </div>
         <div class="hc u">
           <div class="ht">
@@ -1030,11 +1042,13 @@
           t: "KTX Seoul → Busan — No. 27, 11:58→14:42, 4 seats ✓ BOOKED",
           u: "soon",
           d: "Done",
+          preset: true,
         },
         {
           t: "KTX Busan → Seoul — CheongRyong, 12:34→14:59, 4 seats ✓ BOOKED",
           u: "soon",
           d: "Done",
+          preset: true,
         },
         {
           t: "Book Harry Potter Cafe time slot — Hongdae (1 Jun)",
@@ -1057,9 +1071,10 @@
           d: "Due 29 May",
         },
         {
-          t: "Confirm Nouvelle Hotel Seoul payment — Salomon & Icha (Rp 3,400,000)",
+          t: "Nouvelle Hotel Seoul — Salomon & Icha (Rp 3,400,000) ✓ PAID 11 May via Trip.com",
           u: "soon",
-          d: "Check with Salomon",
+          d: "Done",
+          preset: true,
         },
         {
           t: "Confirm Pink Floral Garden House payment — Salomon & Icha (Rp 4,600,000)",
@@ -1136,21 +1151,22 @@
           sec.innerHTML = `<div class="tst">${SEC[g]}</div><div class="tl" id="tg-${g}"></div>`;
           root.appendChild(sec);
           const list = sec.querySelector(`#tg-${g}`);
-          items.forEach(({ t, d, i }) => {
-            const done = !!st[i];
+          items.forEach((item) => {
+            const { t, d, i, preset } = item;
+            const done = i in st ? !!st[i] : !!preset;
             const el = document.createElement("div");
             el.className = "ti" + (done ? " done" : "");
             el.innerHTML = `<div class="tc">${done ? "✓" : ""}</div><div class="tlab">${t}</div><span class="tm ${UC[g]}">${d}</span>`;
             el.onclick = () => {
               const s = load();
-              s[i] = !s[i];
+              s[i] = i in s ? !s[i] : !preset;
               save(s);
               render();
             };
             list.appendChild(el);
           });
         });
-        const done = Object.values(st).filter(Boolean).length;
+        const done = TODOS.filter((t, i) => i in st ? !!st[i] : !!t.preset).length;
         const pct = Math.round((done / TODOS.length) * 100);
         document.getElementById("pf").style.width = pct + "%";
         document.getElementById("pl").textContent =
