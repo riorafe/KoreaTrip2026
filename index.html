@@ -32,6 +32,7 @@
       <button class="nb" onclick="show('todo', this)">✅ To-Do & Pay</button>
       <button class="nb" onclick="show('transport', this)">🚆 Transport</button>
       <button class="nb" onclick="show('food', this)">🍖 Food & Fun</button>
+      <button class="nb" onclick="show('pack', this)">🧳 Packing</button>
     </nav>
 
     <div class="main">
@@ -1287,6 +1288,15 @@
           </ol>
         </div>
       </div>
+      <!-- PACKING LIST -->
+      <div id="panel-pack" class="panel">
+        <div class="pl" id="ppl">Loading…</div>
+        <div class="pw"><div class="pf" id="ppf" style="width: 0%"></div></div>
+        <div id="proot"></div>
+        <div class="note" style="margin-top: 1rem">
+          Tap any item to check it off. Progress saved in this browser.
+        </div>
+      </div>
     </div>
     <!-- /main -->
 
@@ -1466,6 +1476,234 @@
       }
 
       render();
+
+      // ── PACKING LIST ────────────────────────────────────────────
+      const PCATS = {
+        docs: { label: "✈️ Documents & Money", cls: "u-now", tag: "must-have" },
+        elec: { label: "📱 Electronics", cls: "u-soon", tag: "electronics" },
+        cloth: { label: "👗 Clothing", cls: "u-soon", tag: "clothing" },
+        health: {
+          label: "🧴 Toiletries & Health",
+          cls: "u-later",
+          tag: "health",
+        },
+        bags: { label: "🎒 Bags & Organization", cls: "u-later", tag: "bags" },
+        korea: {
+          label: "📋 Korea Essentials",
+          cls: "u-soon",
+          tag: "apps & cards",
+        },
+        shop: { label: "🛍️ Shopping Prep", cls: "u-later", tag: "shopping" },
+        nice: { label: "💡 Nice to Have", cls: "u-later", tag: "optional" },
+      };
+
+      const PACK = [
+        // Documents & Money
+        { c: "docs", t: "Passport (valid 6+ months)" },
+        { c: "docs", t: "Flight e-tickets — VN-630, VN-408, VN-403, VN-631" },
+        { c: "docs", t: "Hotel booking confirmations (all 6 hotels)" },
+        { c: "docs", t: "KTX e-tickets — Seoul→Busan & Busan→Seoul" },
+        {
+          c: "docs",
+          t: "Cash in KRW (₩) — for markets, street food, topup T money",
+        },
+        {
+          c: "docs",
+          t: "Cash in USD ($) — for emergency money",
+        },
+        {
+          c: "docs",
+          t: "Credit/debit card (for tax refund)",
+        },
+        {
+          c: "docs",
+          t: "Scan Passport, plane ticket, baggage number, and send to email for emergency",
+        },
+        // Electronics
+        { c: "elec", t: "2 Smartphone" },
+        { c: "elec", t: "Macbook" },
+        { c: "elec", t: "2 fully charged smart watch" },
+        { c: "elec", t: "2 Fully charged earbuds" },
+        {
+          c: "elec",
+          t: "3 Charger: Xiaomi 67W (Type A), Ugreen 30W (Type C), Samsung 30W (Type C)",
+        },
+        {
+          c: "elec",
+          t: "4 Cable: Xiaomi Type A to C, Ugreen (C to C), Samsung (C to C), Huawei Watch (A to wireless)",
+        },
+        {
+          c: "elec",
+          t: "Powerbank 65W 10.000 mAH, Powerbank slim wireless 6.000 mAH",
+        },
+        { c: "elec", t: "Xiaomi Airtag — for luggage tracking" },
+        {
+          c: "elec",
+          t: "Universal adapter (Korea, Vietnam = Type F, same as Indonesia)",
+        },
+        {
+          c: "elec",
+          t: "T Broco",
+        },
+        // Clothing (late May–early June: 18–26°C, rainy & humid)
+        {
+          c: "cloth",
+          t: "5–6 casual daily outfits (T-shirts, light pants/jeans)",
+        },
+        {
+          c: "cloth",
+          t: "1–2 nicer outfits — anniversary dinner + Cheongdam/Apgujeong",
+        },
+        {
+          c: "cloth",
+          t: "Light jacket or cardigan (cool evenings, especially Busan)",
+        },
+        {
+          c: "cloth",
+          t: "Compact rain jacket or foldable umbrella (rainy season starts late May)",
+        },
+        {
+          c: "cloth",
+          t: "Comfortable walking shoes — non-negotiable, 10–15 km/day",
+        },
+        { c: "cloth", t: "1 pair nicer shoes (dinner, Gangnam area)" },
+        {
+          c: "cloth",
+          t: "Sandals or flip-flops (Spa Land jimjilbang + hotel)",
+        },
+        { c: "cloth", t: "Underwear & socks (6+ pairs each)" },
+        {
+          c: "cloth",
+          t: "Sleepwear / pajamas (also for jimjilbang lounge areas)",
+        },
+        {
+          c: "cloth",
+          t: "Swimwear — Haeundae Beach (Day 5) + Spa Land (Day 6)",
+        },
+        // Toiletries & Health
+        { c: "health", t: "Toothbrush, toothpaste" },
+        {
+          c: "health",
+          t: "Shampoo & conditioner (travel-size — or buy at Olive Young)",
+        },
+        { c: "health", t: "Body wash / soap" },
+        { c: "health", t: "2 small towel — for emergency" },
+        {
+          c: "health",
+          t: "Sunscreen SPF 50+ (Haeundae coast, Gamcheon, Seoul Forest)",
+        },
+        { c: "health", t: "Facial moisturizer / Lip balm / skincare basics" },
+        { c: "health", t: "Personal medications (enough for 12 days + extra)" },
+        { c: "health", t: "Motion sickness pills (buses or KTX if needed)" },
+        {
+          c: "health",
+          t: "Cooling patch — crucial for heavy walking days (buy at Korea)",
+        },
+        { c: "health", t: "Hand sanitizer" },
+        // Bags & Organization
+        { c: "bags", t: "Main checked luggage (23 kg allowance)" },
+        { c: "bags", t: "Carry-on bag (10 kg allowance)" },
+        { c: "bags", t: "Daypack / backpack for daily use" },
+        {
+          c: "bags",
+          t: "Packing cubes — highly recommended for 6 hotels in 12 days",
+        },
+        { c: "bags", t: "Laundry bag" },
+        { c: "bags", t: "Small pouch for T-money card, coins, receipts" },
+        {
+          c: "bags",
+          t: "Empty / collapsible bag for Olive Young & Daiso haul",
+        },
+        // Korea Essentials
+        {
+          c: "korea",
+          t: "T-money card — get at ICN airport CU, load ₩100,000 each",
+        },
+        { c: "korea", t: "Naver Maps — download offline map before landing" },
+        { c: "korea", t: "Kakao T — taxi app, download and set up in advance" },
+        {
+          c: "korea",
+          t: "Papago — Pre-downloaded Korean phrases (useful at markets & restaurants)",
+        },
+        // Shopping Prep
+        {
+          c: "shop",
+          t: "Keep all department store receipts for tax refund at ICN (2 Jun)",
+        },
+        { c: "shop", t: "Lotte Card / credit card ready for Lotte Dept Store" },
+        // Nice to Have
+        {
+          c: "nice",
+          t: "2 Neck pillow",
+        },
+        {
+          c: "nice",
+          t: "2 Eye mask",
+        },
+        {
+          c: "nice",
+          t: "2 Ear plug",
+        },
+        {
+          c: "nice",
+          t: "Rio's Spare Eyeglasses",
+        },
+        {
+          c: "nice",
+          t: "Ziplock bags — for wet swimwear after Haeundae + Spa Land",
+        },
+      ];
+
+      function loadPack() {
+        try {
+          return JSON.parse(localStorage.getItem("k26p") || "{}");
+        } catch {
+          return {};
+        }
+      }
+      function savePack(s) {
+        try {
+          localStorage.setItem("k26p", JSON.stringify(s));
+        } catch {}
+      }
+
+      function renderPack() {
+        const st = loadPack(),
+          root = document.getElementById("proot");
+        root.innerHTML = "";
+        const catKeys = [...new Set(PACK.map((p) => p.c))];
+        catKeys.forEach((ck) => {
+          const cat = PCATS[ck];
+          const items = PACK.map((p, i) => ({ ...p, i })).filter(
+            (p) => p.c === ck,
+          );
+          const sec = document.createElement("div");
+          sec.className = "tsec";
+          sec.innerHTML = `<div class="tst">${cat.label}</div><div class="tl" id="pg-${ck}"></div>`;
+          root.appendChild(sec);
+          const list = sec.querySelector(`#pg-${ck}`);
+          items.forEach(({ t, i }) => {
+            const done = !!st[i];
+            const el = document.createElement("div");
+            el.className = "ti" + (done ? " done" : "");
+            el.innerHTML = `<div class="tc">${done ? "✓" : ""}</div><div class="tlab">${t}</div><span class="tm ${cat.cls}">${cat.tag}</span>`;
+            el.onclick = () => {
+              const s = loadPack();
+              s[i] = !s[i];
+              savePack(s);
+              renderPack();
+            };
+            list.appendChild(el);
+          });
+        });
+        const done = PACK.filter((_, i) => !!st[i]).length;
+        const pct = Math.round((done / PACK.length) * 100);
+        document.getElementById("ppf").style.width = pct + "%";
+        document.getElementById("ppl").textContent =
+          `${done} of ${PACK.length} items packed (${pct}%)`;
+      }
+
+      renderPack();
     </script>
   </body>
 </html>
