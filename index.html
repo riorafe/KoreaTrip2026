@@ -133,7 +133,7 @@
             </li>
             <li>
               Visit <strong>Lotte Department Store Myeongdong</strong> — buy
-              shoes in the flagship luxury mall; utilize Lotte Exclusive Card.
+              shoe in the flagship luxury mall; utilize Lotte Exclusive Card.
             </li>
             <li>
               Visit <strong>Myeongdong Cathedral</strong> — historic,
@@ -1623,7 +1623,6 @@
           c: "health",
           t: "Cooling patch — crucial for heavy walking days (buy at Korea)",
         },
-        { c: "health", t: "Hand sanitizer" },
         { c: "health", t: "Bidet" },
         { c: "health", t: "2 Spare Masker" },
         // Bags & Organization
@@ -1702,29 +1701,27 @@
         const catKeys = [...new Set(PACK.map((p) => p.c))];
         catKeys.forEach((ck) => {
           const cat = PCATS[ck];
-          const items = PACK.map((p, i) => ({ ...p, i })).filter(
-            (p) => p.c === ck,
-          );
+          const items = PACK.filter((p) => p.c === ck);
           const sec = document.createElement("div");
           sec.className = "tsec";
           sec.innerHTML = `<div class="tst">${cat.label}</div><div class="tl" id="pg-${ck}"></div>`;
           root.appendChild(sec);
           const list = sec.querySelector(`#pg-${ck}`);
-          items.forEach(({ t, i }) => {
-            const done = !!st[i];
+          items.forEach(({ t }) => {
+            const done = !!st[t];
             const el = document.createElement("div");
             el.className = "ti" + (done ? " done" : "");
             el.innerHTML = `<div class="tc">${done ? "✓" : ""}</div><div class="tlab">${t}</div><span class="tm ${cat.cls}">${cat.tag}</span>`;
             el.onclick = () => {
               const s = loadPack();
-              s[i] = !s[i];
+              s[t] = !s[t];
               savePack(s);
               renderPack();
             };
             list.appendChild(el);
           });
         });
-        const done = PACK.filter((_, i) => !!st[i]).length;
+        const done = PACK.filter((p) => !!st[p.t]).length;
         const pct = Math.round((done / PACK.length) * 100);
         document.getElementById("ppf").style.width = pct + "%";
         document.getElementById("ppl").textContent =
